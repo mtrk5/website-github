@@ -1,0 +1,122 @@
+@font-face{
+    font-family: cocaColaFont;
+    src: url(../assets/fonts/loki_cola/LOKICOLA.TTF);
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(../assets/fonts/Oswald/Oswald-Regular.ttf);
+}
+
+@font-face {
+    font-family: OpenSans ;
+    src: url(../assets/fonts/OpenSans/OpenSans-Regular.ttf);
+}
+
+body{
+    padding-top: 0px;
+    padding-bottom: 5px;
+    background-color: lightblue;
+}
+
+p{
+    font-family: "OpenSans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Oswald;
+}
+
+canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+#main_3d_image{
+    background-image:url(../assets/images/Main_3D.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+}
+
+#main_text{
+    float: left;
+    margin: 5%;
+    width: 90%;
+    display: block;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#main_text h2{
+    color: lightcyan;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+#main_text h3{
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#main_text p{
+    font-size: 12px;
+    margin: 0px;
+    line-height:1.2;
+}
+
+.card {
+    border: 1px solid rgba(0,0,0,.125);
+    margin-top: 10px;    
+    margin-bottom: 10px;    
+    background-color: rgba(182, 231, 243, 1.0); }
+
+
+.logo{
+    margin-top:3px;
+}
+
+.logo h1{
+    font-family: cocaColaFont;
+    font-size: 31px;
+    margin:0px;
+    margin-top:-10px;
+    margin-bottom: -15px;
+    float:left;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 2px;
+
+}
+
+.logo h2{
+    font-family: cocaColaFont;
+    font-size: 31px;
+    margin-top: -6px;
+    margin-bottom: -15px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 3px;
+    float: left;
+}
+
+.logo h3 {
+    font-family: cocaColaFont;
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: -5px;
+    padding-top: 0px;
+    padding-left: 0px;
+    float: left;
+}
+.logo p {
+    font-size: 7px;
+    margin-top: 22px;
+    margin-bottom: 0px;padding-top: 0px;
+    padding-left: 3px;
+}

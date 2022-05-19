@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <script src="https://kit.fontawesome.com/9a81e458d9.js" crossorigin="anonymous"></script>
+
+        <title>Coca cola 3D</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class = "logo">
+                    <a class= "navbar-brand" href="#">
+                        <h1>1</h1>
+                        <h1>oka</h1>
+                        <h2>Cola</h2>
+                        <h3>New</h3>
+                        <p>new face of coke</p>
+                    </a>
+                </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a id="navHome" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a id="navAbout" class="nav-link" href="#" id="navbardrop" role="button" data-toggle="dropdown">
+                        About
+                        </a>
+
+                    <li class="nav-item">
+                        <a id="navModels" class="nav-link" href="#" id="navbardrop" role="button" data-toggle="dropdown">
+                        Models
+                        </a>
+                    </li>    
+                </ul>   
+            </div>    
+        </nav>
+        <div class="container-fluid main_contents">
+            <div id ="home">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <div id="main_3d_image">
+                            <div id="main_text" class="col-xs-12 col-sm-4">
+                                <h2>Coca Cola Great Britain</h2>
+                                <h3>Founded by Dr John S Pemberton</h3>
+                                <p>The Coca Cola  Company is the world's leading manufacturer, marketer and distributer
+                                    of non-alcoholic beverage concentrates and syrups, and produces nearly 400 brands.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+                <div class="row">
+                    <div class = "col-sm-4">
+                        <div class = "card">
+                            <a href="#">
+                                <img class ="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg" alt="Sprite">
+                            </a>
+                            <div class = "card-body">
+                                <h3 class = "card-title">Sprite</h3>
+                                <p class="card-text">Sprite is a colorless, lemon and lime-flavored soft drink created by The Coca-Cola Company. 
+                                    It was first developed in West Germany in 1959 as Fanta Klare Zitrone ("Clear Lemon Fanta") and was introduced in the United States under the current brand name Sprite in 1961 as a competitor to 7 Up. 
+                                    Sprite comes in multiple flavours, including, but not limited to, cranberry, cherry, grape, orange, and vanilla. </p>
+                                <a href="Models.html" class="btn btn-primary">Find out more ...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "col-sm-4">
+                        <div class = "card">
+                            <a href="#">
+                                <img class ="card-img-top img-fluid img-thumbnail" src="assets/images/oasis.jpg" alt="oasis">
+                            </a>
+                            <div class = "card-body">
+                                <h3 class = "card-title">Oasis</h3>
+                                <p class="card-text">Oasis is a non-carbonated bottled soft drink, a product of Orangina Schweppes.
+                                    It originated in France by Volvic in 1966 and initially distributed under the name 'Pulse', until flagging sales led to a rebrand and its current name 'Oasis' being introduced. 
+                                    The drink is described as a "fruit juice drink - with sugar and sweeteners".  </p>
+                                <a href="Models.html" class="btn btn-primary">Find out more ...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "col-sm-4">
+                        <div class = "card">
+                            <a href="#">
+                                <img class ="card-img-top img-fluid img-thumbnail" src="assets/images/costa.jpg" alt="Costa">
+                            </a>
+                            <div class = "card-body">
+                                <h3 class = "card-title">Costa</h3>
+                                <p class="card-text">Costa Coffee is a British coffeehouse chain and a subsidiary of The Coca-Cola Company. It is headquartered in Dunstable, England. 
+                                    Costa Coffee was founded in London in 1971 by two brothers Bruno and Sergio Costa as a wholesale operation supplying roasted coffee to caterers and specialist Italian coffee shops. </p>
+                            
+                                <a href="Models.html" class="btn btn-primary">Find out more ...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="models">
+                <div class = "row">
+                    <div class = "col-sm-8">
+                        <canvas id="unity-canvas" style="width: 960px; height: 600px; background: #231F20"></canvas>
+                        <script src="Build/build.loader.js"></script>
+                        <script>
+                            var  unityGame; 
+                            var script = document.createElement("script");
+                            createUnityInstance(document.querySelector("#unity-canvas"), {
+                                    dataUrl: "Build/build.data.unityweb",
+                                    frameworkUrl: "Build/build.framework.js.unityweb",
+                                    codeUrl: "Build/build.wasm.unityweb",
+                                    streamingAssetsUrl: "StreamingAssets",
+                                    companyName: "DefaultCompany",
+                                    productName: "webgl",
+                                    productVersion: "0.1",
+                            }).then((unityInstance) => {
+                            
+                                    unityGame = unityInstance;
+                                    }).catch((message) => {
+                                    alert(message);
+                            });
+
+                        </script>
+                    </div>
+                </div>
+            
+
+                <div id = "interactions" class = "row">
+                    <div class = "col-sm-4">
+                        <div class ="card-text-left">
+                            <div class = "card-header">
+                                <h3>Cameras<h3>
+                            </div>
+                            <div class="card-body">
+                                <h3 class = "card-title"> Cameras</h3>
+                                <button type="button" class ="btn btn-primary" onclick="unityGame.SendMessage('Camera Holder', 'ChangeCamera', 0)"> Front</button>
+                                <button type="button" class ="btn btn-primary" onclick="unityGame.SendMessage('Camera Holder', 'ChangeCamera', 1)"> Left</button>
+                                <button type="button" class ="btn btn-primary" onclick="unityGame.SendMessage('Camera Holder', 'ChangeCamera', 2)"> Back</button>
+                                <button type="button" class ="btn btn-primary" onclick="unityGame.SendMessage('Camera Holder', 'ChangeCamera', 3)"> Right</button>
+                                <button type="button" class ="btn btn-primary" onclick="unityGame.SendMessage('Camera Holder', 'ChangeCamera', 4)"> Top</button>
+                                <button type="button" class ="btn btn-primary" onclick="unityGame.SendMessage('Camera Holder', 'ChangeCamera', 5)"> Bottom</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "col-sm-4">
+                        <div class ="card-text-left">
+                            <div class = "card-header">
+                                <h3>Animation<h3>
+                            </div>
+                            <div class="card-body">
+                                <h3 class = "card-title"> Animation Options</h3>
+                                <button type="button" class ="btn btn-primary" onclick="unityGame.SendMessage('Model Controller', 'RotateX')"> Rotate X</button>
+                                <button type="button" class ="btn btn-primary" onclick="unityGame.SendMessage('Model Controller', 'RotateY')"> Rotate Y</button>
+                                <button type="button" class ="btn btn-primary" onclick="unityGame.SendMessage('Model Controller', 'RotateZ')"> Rotate Z</button>
+                                <button type="button" class ="btn btn-primary" onclick="unityGame.SendMessage('Model Controller', 'StopRotation')"> Stop</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "col-sm-4">
+                        <div class ="card-text-left">
+                            <div class = "card-header">
+                                <h3>Rendering<h3>
+                            </div>
+                            <div class="card-body">
+                                <h3 class = "card-title">Rendering</h3>
+                                <button type="button" class ="btn btn-primary" onclick="unityGame.SendMessage('Camera Holder', 'ToggleWireframe')"> Toggle Wireframe</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "col-sm-4">
+                        <div class ="card-text-left">
+                            <div class = "card-header">
+                                <h3>Objects<h3>
+                            </div>
+                            <div class="card-body">
+                                <h3 class = "card-title">Change objects here</h3>
+                                <button type="button" class ="btn btn-primary" onclick="unityGame.SendMessage('Model Controller', 'ChangeModel',0)"> Coke</button>
+                                <button type="button" class ="btn btn-primary" onclick="unityGame.SendMessage('Model Controller', 'ChangeModel',1)"> Oasis</button>
+                                <button type="button" class ="btn btn-primary" onclick="unityGame.SendMessage('Model Controller', 'ChangeModel',2)"> Costa</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <nav class = "navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class= "container-fluid">
+                <div class= "navbar-text float-left copyright">
+                    <p><span class = "align-baseline"></span>&copy 2022 3D mobile apps</p>
+                    <a href="https://github.com/mtrk5/website-github">github</a>
+                </div>
+            </div>
+        </nav>
+
+        <script src="js/jquery-3.6.0.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script script src="js/navigation.js"></script>
+    </body>
+</html>
